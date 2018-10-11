@@ -1,0 +1,14 @@
+// This file contains ISIS_Metric_Data proto data
+syntax = "proto2";
+
+message IFACE {
+  required string name = 1;
+  required int32 metric1 = 2;
+  required int32 metric2 = 3;
+}
+
+// Our address book file is just one of these.
+message UPDATE {
+  required string name = 1;
+  repeated IFACE ifaces = 2;
+}
